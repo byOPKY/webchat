@@ -7,10 +7,59 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/chat.css">
 </head>
 <body>
-	
-	<script type="text/javascript" href="js/jquery-3.1.1.js"></script>
+	<div class="container">
+	    <div class="page-header">
+	        <h1 class="text-center">Chat</h1>
+	    </div>
+	    <div class="row">
+	      <div class="col-xs-12">
+	        <div class="input-group entrada" id="nickWrap">
+	            <input id="nickname" class="form-control input-lg" type="text" placeholder="Enter your username">
+	            <span class="input-group-btn">
+	                <button class="btn btn-lg btn-primary" type="submit" id="setNick">OK</button>
+	            </span>
+	        </div>
+	        <div class="alert fade in alert-danger alert-dismissable disNone" data-dismiss="alert" id="login-error">
+	            <button type="button" class="close" id="closeAlert">×</button>
+	            That username is already taken. Try again.
+	        </div>
+	      </div>
+	    </div>
+	    <div id="contentWrap" class="row alto">
+	        <div id="chatWrap"  class="col-xs-8">
+	            <div class="panel panel-success">
+	                <div class="panel-heading">Chat</div>
+	                <div id="chat" class="panel-body"></div>
+	            </div>
+	            <div>
+	                <form id="send-message" class="input-group entrada">
+	                <input id="message" class="form-control input-lg" type="text">
+	                <span class="input-group-btn">
+	                    <button class="btn btn-lg btn-primary" type="submit">Send</button>
+	                </span>
+	                </form>
+	            </div>
+	            <!--
+	                <input size="35" id="message"></input>
+	                <input type="submit"></input>
+	            </form>-->
+	        </div>
+	        <div class="col-xs-4">
+	            <div class="panel panel-info">
+	                <div class="panel-heading">Users</div>
+	                <div id="users" class="panel-body"></div>
+	            </div>
+	        </div>
+	    </div>  
+	</div>
+
+	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
 	<script type="text/javascript" href="js/app.js"></script>
+	<script type="text/javascript" href="js/chat.js"></script>
 </body>
 </html>
