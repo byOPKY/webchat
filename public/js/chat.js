@@ -42,12 +42,10 @@ var iniciar = function($) {
    
    socket.on('usernames', function(data) {
         var html = '';
-        var $usuario = $("<div>");
         for (var username in data) {
             html += username;
         }
-        $usuario.html(html);
-        $users.append($usuario);
+        $users.html(html);
     });
    
 };
