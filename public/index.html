@@ -19,36 +19,40 @@
 	        <div class="input-group entrada" id="nickWrap">
 	            <input id="nickname" class="form-control input-lg" type="text" placeholder="Elige un usuario">
 	            <span class="input-group-btn">
-	                <button class="btn btn-lg btn-success" type="submit" id="setNick">OK</button>
+	                <button class="btn btn-lg btn-success" type="submit" id="setNick">Entrar</button>
 	            </span>
 	        </div>
 	        <div class="alert fade in alert-danger alert-dismissable disNone" data-dismiss="alert" id="login-error">
 	            <button type="button" class="close" id="closeAlert">×</button>
-	            That username is already taken. Try again.
+	            Este usuario ya existe, por favor eliga de nuvo.
 	        </div>
 	      </div>
 	    </div>
-	    <div id="contentWrap" class="row alto">
+	    <div class="contentWrap" class="row alto">
 	        <div id="chatWrap"  class="col-xs-8">
 	            <div class="panel panel-success">
-	                <div class="panel-heading">Chat</div>
+	                <div class="panel-heading">Conversasión</div>
 	                <div id="chat" class="panel-body"></div>
-	            </div>
-	            <div>
-	                <form id="send-message" class="input-group entrada">
-	                <input id="message" class="form-control input-lg" type="text">
-	                <span class="input-group-btn">
-	                    <button class="btn btn-lg btn-primary" type="submit">Send</button>
-	                </span>
-	                </form>
 	            </div>
 	        </div>
 	        <div class="col-xs-4">
 	            <div class="panel panel-info">
-	                <div class="panel-heading">Users</div>
+	                <div class="panel-heading">Usuarios</div>
 	                <div id="users" class="panel-body"></div>
 	            </div>
 	        </div>
+	    </div>
+	    <div class="row contentWrap">
+	    	<div class="col-xs-12">
+				<div>
+				    <form id="send-message" class="input-group entrada">
+				    <input id="message" class="form-control input-lg" type="text">
+				    <span class="input-group-btn">
+				        <button class="btn btn-lg btn-primary" type="submit">Enviar</button>
+				    </span>
+				    </form>
+				</div>
+	    	</div>
 	    </div>  
 	</div>
 

@@ -14,12 +14,13 @@ var chat = function(e) {
    socket.emit('new user', $nickBox.val(), function(data) {
        if(data) {
            $('#nickWrap').hide();
-           $('#contentWrap').show();
+           $('.contentWrap').show();
        } else {
            $("#login-error").show();
        }
    });
    $nickBox.val('');
+   $("h1").text("¡¡Bienvenido al chat!!");
 }
 var iniciar = function($) {
    $nickForm.click(chat);
@@ -31,9 +32,11 @@ var iniciar = function($) {
        if($messageBox.val()!='') socket.emit('send message', $messageBox.val());
        $messageBox.val('');
    });
+   
    socket.on('new message', function(data) {
       $chat.append('<b>'+data.nick+":</b> "+data.msg+"<br/>"); 
    });
+   
    socket.on('usernames', function(data) {
         var html = '';
         for (var username in data) {

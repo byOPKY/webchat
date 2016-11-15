@@ -1,23 +1,27 @@
-*{
-	box-sizing: border-box;
-	padding: 0px;
-	margin: 0px;
+body{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
-#contentWrap{
-    display: none;
-}
-#chatWrap{
-    float: left;
-}
+h1{color: #fff;}
+.contentWrap{display: none;}
+#chatWrap{float: left;}
+#users{font-weight: bold;}
 #chat{
     position: relative;
     width: 100%;
     float:left;
     min-height:100px;
-    height: 90%;
-    overflow: auto;
+    height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    margin: 10px 0px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
 }
-/***********************************/
 .disNone{display: none;}
 .alto{height: 50%;}
 .ancho{width: 50%;}
