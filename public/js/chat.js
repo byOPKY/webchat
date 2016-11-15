@@ -8,6 +8,7 @@ var $nickForm = $('#setNick');
 var $nickBox = $('#nickname');
 var $users = $('#users');
 var $closeAlert = $('#closeAlert');
+var $hora = new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
 
 var chat = function(e) {
    e.preventDefault();
@@ -34,15 +35,19 @@ var iniciar = function($) {
    });
    
    socket.on('new message', function(data) {
-      $chat.append('<b>'+data.nick+":</b> "+data.msg+"<br/>"); 
+      var $msn = $("<div>");
+      $msn.append("<b>"+data.nick+":</b> "+data.msg + "</br>" + $hora);
+      $chat.append($msn);
    });
    
    socket.on('usernames', function(data) {
         var html = '';
+        var $usuario = $("<div>");
         for (var username in data) {
-            html += username + '<br/>';
+            html += username;
         }
-        $users.html(html);
+        $usuario.html(html);
+        $users.append($usuario);
     });
    
 };
