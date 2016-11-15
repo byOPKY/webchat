@@ -158,3 +158,4 @@ function scaleVideos() {
 }
 
 window.onresize = scaleVideos;
+window.onload=sh_highlightDocument();

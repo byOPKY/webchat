@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     </head>
 
-    <body onload="sh_highlightDocument();">
+    <body>
         <div class="container">
             <p>
             Código de la Video Conferencia: <code><span id="unique-token"> #123456789</span></code>
@@ -35,7 +35,7 @@
         
         <!-- list of all available conferencing rooms -->
         <div class="container">
-            <table style="width: 100%;" id="rooms-list"></table>
+            <table class="col l12 s12"  id="rooms-list"></table>
         </div>
         
         <script src="https://cdn.webrtc-experiment.com/firebase.js"> </script>
