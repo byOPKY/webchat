@@ -10,6 +10,8 @@ var server = require('http').createServer(app);
 var io = require("socket.io").listen(server);
 var nicknames = {};
 
+app.set("port", process.env.PORT || 8000);
+
 app.use(express.static(__dirname + '/public'));
 
 io.sockets.on('connection', function(socket) {
@@ -39,6 +41,6 @@ io.sockets.on('connection', function(socket) {
         io.sockets.emit('usernames', nicknames);
     }
 });
-server.listen(8000, function() {
+server.listen(app.get("port"), function() {
     console.log("Servidor encendido 8000");
 });
