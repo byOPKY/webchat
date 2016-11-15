@@ -246,7 +246,7 @@ var conference = function(config) {
     openDefaultSocket();
     return {
         createRoom: function(_config) {
-            self.roomName = _config.roomName || 'Anonymous';
+            self.roomName = _config.roomName || 'ANÓNIMO';
             self.roomToken = uniqueToken();
 
             isbroadcaster = true;

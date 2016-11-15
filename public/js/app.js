@@ -33,8 +33,8 @@ var config = {
         if (typeof roomsList === 'undefined') roomsList = document.body;
 
         var tr = document.createElement('tr');
-        tr.innerHTML = '<td><strong>' + room.roomName + '</strong> shared a conferencing room with you!</td>' +
-            '<td><button class="join">Join</button></td>';
+        tr.innerHTML = '<td><strong>' + room.roomName + '</strong> quiere compartir una video conferencia contigo...</td>' +
+            '<td><button class="join waves-effect waves-light btn">Join</button></td>';
         roomsList.insertBefore(tr, roomsList.firstChild);
 
         var joinRoomButton = tr.querySelector('.join');
@@ -72,7 +72,7 @@ function setupNewRoomButtonClickHandler() {
     document.getElementById('conference-name').disabled = true;
     captureUserMedia(function() {
         conferenceUI.createRoom({
-            roomName: (document.getElementById('conference-name') || { }).value || 'Anonymous'
+            roomName: (document.getElementById('conference-name') || { }).value || 'ANÓNIMO'
         });
     }, function() {
         btnSetupNewRoom.disabled = document.getElementById('conference-name').disabled = false;

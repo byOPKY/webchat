@@ -1,34 +1,32 @@
+body{
+    background-color: #D7EC8D;
+    height: 100vh;
+    color: #525661;
+}
 *{
 	box-sizing: border-box;
 	padding: 0px;
 	margin: 0px;
+    font-size: 20px;
 }
 audio, video {
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
-    
     -o-transition: all 1s ease;
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
     vertical-align: top;
+    border: 5px solid #2E9F83;
 }
-
-input {
+#unique-token{
+    font-weight: bolder;
+}
+.input-conference {
     border: 1px solid #d9d9d9;
     border-radius: 1px;
     font-size: 2em;
     margin: .2em;
     width: 30%;
-}
-
-.setup {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    font-size: 102%;
-    height: 47px;
-    margin-left: -9px;
-    margin-top: 8px;
-    position: absolute;
 }
 
 p { padding: 1em; }
