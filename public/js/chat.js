@@ -43,7 +43,7 @@ var iniciar = function($) {
    socket.on('usernames', function(data) {
         var html = '';
         for (var username in data) {
-            html += username;
+            html += username + "</br>";
         }
         $users.html(html);
     });
