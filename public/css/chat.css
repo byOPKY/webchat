@@ -3,9 +3,12 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: #26A69A;
     height: 100vh;
 }
 h1{color: #fff;}
+.logo{margin: 5% 0%}
+.logo img{width: 200px;}
 .contentWrap{display: none;}
 #chatWrap{float: left;}
 #users{font-weight: bold;}
@@ -25,8 +28,4 @@ h1{color: #fff;}
 .disNone{display: none;}
 .alto{height: 50%;}
 .ancho{width: 50%;}
-.entrada{
-	text-align: center;
-	margin: 0 auto;
-}
 .verde{color: green;}

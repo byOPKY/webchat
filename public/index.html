@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/favicon.png">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/chat.css">
@@ -14,21 +15,22 @@
 	    <div class="page-header">
 	        <h1 class="text-center">Comienza el Chat!</h1>
 	    </div>
+	    <div class="logo nickWrap">
+	    	<img class="center-block" src="img/chat.png" alt="chat">
+	    </div>
 	    <div class="row">
 	      <div class="col-xs-12">
-	        <div class="input-group entrada" id="nickWrap">
-	            <input id="nickname" class="form-control input-lg" type="text" placeholder="Elige un usuario">
-	            <span class="input-group-btn">
-	                <button class="btn btn-lg btn-success" type="submit" id="setNick">Entrar</button>
-	            </span>
+	        <div class="form-group nickWrap" id="nickWrap">
+	            <input id="nickname" class="form-control" type="text" placeholder="Elige un usuario">
 	        </div>
+	       	<button class="btn btn-success btn-lg btn-block nickWrap" type="submit" id="setNick">Entrar</button>
 	        <div class="alert fade in alert-danger alert-dismissable disNone" data-dismiss="alert" id="login-error">
 	            <button type="button" class="close" id="closeAlert">×</button>
 	            Este usuario ya existe, por favor eliga de nuvo.
 	        </div>
 	      </div>
 	    </div>
-	    <div class="contentWrap" class="row alto">
+	    <div class="contentWrap row">
 	        <div id="chatWrap"  class="col-xs-8">
 	            <div class="panel panel-success">
 	                <div class="panel-heading">Conversasión</div>
@@ -36,15 +38,21 @@
 	            </div>
 	        </div>
 	        <div class="col-xs-4">
-	            <div class="panel panel-info">
-	                <div class="panel-heading">Usuarios</div>
-	                <div id="users" class="panel-body"></div>
-	            </div>
-	            <div class="panel panel-default">
-				  <div class="panel-body">Video Conferencia</div>
-				  <div class="panel-footer">
-	            	<a target="_blank" class="btn btn-primary" href="/camera.html">Click aquí!</a>
-				  </div>
+				<div class="row">
+				    <div class="col-xs-12">
+				        <div class="panel panel-info">
+				            <div class="panel-heading">Usuarios</div>
+				            <div id="users" class="panel-body"></div>
+				        </div>
+				    </div>
+				    <div class="col-xs-12">
+				        <div class="panel panel-default">
+						  <div class="panel-body">Video llamada</div>
+						  <div class="panel-footer">
+				        	<a target="_blank" class="btn btn-success" href="/camera.html">Click aquí!</a>
+						  </div>
+						</div>
+				    </div>
 				</div>
 	        </div>
 	    </div>
@@ -54,7 +62,7 @@
 				    <form id="send-message" class="input-group entrada">
 				    <input id="message" class="form-control input-lg" type="text">
 				    <span class="input-group-btn">
-				        <button class="btn btn-lg btn-primary" type="submit">Enviar</button>
+				        <button class="btn btn-lg btn-success" type="submit">Enviar</button>
 				    </span>
 				    </form>
 				</div>
