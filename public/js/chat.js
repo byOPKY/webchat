@@ -46,6 +46,6 @@ var iniciar = function($) {
         }
         $users.html(html);
     });
-   
 };
+
 jQuery(iniciar);
