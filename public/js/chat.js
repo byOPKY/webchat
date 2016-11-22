@@ -20,7 +20,7 @@ var chat = function(e) {
        }
    });
    $nickBox.val('');
-   $("h1").text("¡¡Bienvenido al chat!!");
+   $("h1").text("¡Bienvenido al chat!");
 }
 var iniciar = function($) {
    $nickForm.click(chat);

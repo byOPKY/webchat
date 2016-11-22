@@ -81,7 +81,6 @@ function setupNewRoomButtonClickHandler() {
 
 function captureUserMedia(callback, failure_callback) {
     var video = document.createElement('video');
-
     getUserMedia({
         video: video,
         onsuccess: function(stream) {
@@ -123,7 +122,7 @@ function rotateVideo(video) {
 (function() {
     var uniqueToken = document.getElementById('unique-token');
     if (uniqueToken)
-        if (location.hash.length > 2) uniqueToken.parentNode.parentNode.parentNode.innerHTML = '<h2 style="text-align:center;"><a href="' + location.href + '" target="_blank">Share this link</a></h2>';
+        if (location.hash.length > 2) uniqueToken.parentNode.parentNode.parentNode.innerHTML = '<h2 class="center-align"><a href="' + location.href + '" target="_blank">Share this link</a></h2>';
         else uniqueToken.innerHTML = uniqueToken.parentNode.parentNode.href = '#' + (Math.random() * new Date().getTime()).toString(36).toUpperCase().replace( /\./g , '-');
 })();
 

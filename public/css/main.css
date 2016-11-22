@@ -1,13 +1,17 @@
-body{
-    background-color: #D7EC8D;
-    height: 100vh;
-    color: #525661;
-}
 *{
-	box-sizing: border-box;
-	padding: 0px;
-	margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
     font-size: 20px;
+}
+body{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #26A69A;
+    height: 100vh;
+    color: #fff;
 }
 audio, video {
     -moz-transition: all 1s ease;
@@ -18,9 +22,7 @@ audio, video {
     vertical-align: top;
     border: 5px solid #2E9F83;
 }
-#unique-token{
-    font-weight: bolder;
-}
+#unique-token{font-weight: bolder;}
 .input-conference {
     border: 1px solid #d9d9d9;
     border-radius: 1px;
@@ -28,9 +30,7 @@ audio, video {
     margin: .2em;
     width: 30%;
 }
-
-p { padding: 1em; }
-
+p {padding: 1em;}
 li {
     border-bottom: 1px solid rgb(189, 189, 189);
     border-left: 1px solid rgb(189, 189, 189);
